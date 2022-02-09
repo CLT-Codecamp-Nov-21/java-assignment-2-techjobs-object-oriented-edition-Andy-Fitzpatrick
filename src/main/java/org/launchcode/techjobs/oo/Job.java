@@ -34,6 +34,40 @@ public class Job {
     //  match.
 
     @Override
+    public String toString() {
+        String idField = "ID: " + this.getId() + "\n";
+
+
+        String nameField = "Name: " + this.name + "\n";
+        if (this.name == ""){
+            nameField = "Name: Data not available\n";
+        }
+
+        String employerField = "Employer: " + this.getEmployer().getValue() + "\n";
+        if (getEmployer().getValue() == ""){
+            employerField = "Employer: Data not available\n";
+        }
+
+        String locationField = "Location: " + this.getLocation().getValue() + "\n";
+        if (getLocation().getValue() == ""){
+            locationField = "Location: Data not available\n";
+        }
+
+        String positionField = "Position Type: " + this.getPositionType().getValue() + "\n";
+        if (getPositionType().getValue() == ""){
+            positionField = "Position Type: Data not available\n";
+        }
+
+        String coreCompetencyField = "Core Competency: " + this.getCoreCompetency().getValue();
+        if (getCoreCompetency().getValue() == ""){
+            coreCompetencyField = "Core Competency: Data not available";
+        }
+
+        return "\n" + idField + nameField + employerField + locationField + positionField + coreCompetencyField + "\n";
+    }
+
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
