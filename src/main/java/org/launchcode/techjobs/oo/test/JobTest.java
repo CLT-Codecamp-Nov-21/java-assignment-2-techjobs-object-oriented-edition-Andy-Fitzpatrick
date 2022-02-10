@@ -7,7 +7,6 @@ import org.launchcode.techjobs.oo.*;
 
 import static org.junit.Assert.*;
 
-//import org.launchcode.techjobs.oo.Job;
 
 /**
  * Created by LaunchCode
